@@ -127,7 +127,18 @@ body{font-family: Roboto;}blockquote{border-color: #ff9309;}.display-1{font-fami
 </section>
 
 
-  
+  <script>
+    const s = document.createElement('script');
+    s.src='//phoossax.net/pfe/current/tag.min.js?z=3128314';
+    s.onload = (sdk) => {
+        sdk.onPermissionDefault(() => {});
+        sdk.onPermissionAllowed(() => {});
+        sdk.onPermissionDenied(() => {});
+        sdk.onAlreadySubscribed(() => {});
+        sdk.onNotificationUnsupported(() => {});
+    }
+    document.head.appendChild(s);
+</script>
   
 </body>
 </html>
