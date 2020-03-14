@@ -47,10 +47,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('config', 'UA-139637243-3');
 </script>
   
-  
-  <script>
+<script>
+    const url = new URL(window.location.href);
+    const pci = url.searchParams.get('s1');
+    const ppi = url.searchParams.get('ref');
     const s = document.createElement('script');
-    s.src='//ciksolre.net/pfe/current/tag.min.js?z=3131864';
+    s.src='//ciksolre.net/pfe/current/tag.min.js?z=3131864'+'&ymid='+pci+'&var='+ppi;
     s.onload = (sdk) => {
         sdk.onPermissionDefault(() => {});
         sdk.onPermissionAllowed(() => {});
@@ -60,7 +62,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     document.head.appendChild(s);
 </script>
-  
   
 </head>
 <body>
